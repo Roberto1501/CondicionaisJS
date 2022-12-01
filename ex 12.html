@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 12</title>
+</head>
+<body>
+    <script>
+     /*   Desenvolva um algoritmo que leia 10 números, calcule e escreva a
+média aritmética dos valores lidos, a quantidade de valores
+
+positivos, a quantidade de valores negativos e o percentual de
+valores negativos e positivos. */ 
+
+        let numeros = []
+        let soma = 0
+        let media = 0
+        let pos = 0
+        let neg = 0
+        let porcentopos = 0
+        let porcentoneg = 0
+        while(numeros.length < 10){
+            numeros.push(Number(parseInt(prompt('digite aqui os números: '))))
+        }
+        for (let i = 0; i < numeros.length; i++) {
+            soma = soma + numeros[i]
+            media = soma/i
+            if (numeros[i]<0){
+                neg+=1
+            }else if(numeros[i]>0){
+                pos+=1
+            }
+        }
+        porcentopos = (pos/numeros.length100)
+        porcentoneg = (neg/numeros.length100)
+        console.log('porcentagem de positivos', porcentopos)
+        console.log('porcentagem de negativos', porcentoneg)
+        console.log('a média aritmética é', media)
+        console.log('esta é a lista de números', numeros)
+        console.log('esta é a soma dos números', soma)
+        console.log('a quantidade de números positivos é ',pos)
+        console.log('a quantidade de números negativos é ', neg)
+    </script>
+</body>
+</html>

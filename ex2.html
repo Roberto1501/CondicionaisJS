@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 2</title>
+</head>
+<body>
+   <script>
+    /* Escreva um algoritmo que solicite 2 números e uma operação
+matemática. O algoritmo deve realizar o cálculo com os 2 números
+digitados conforme a operação informada.*/
+
+const num1 = parseFloat(prompt('digite o primeiro número:'))
+const num2 = parseFloat(prompt('digite o segundo número: '))
+let calculo = prompt('Escolha qual operação matemática fazer:\n [+] Adição \n [-] Subtração \n Multiplicação [*] \n Divisão [/] \n ')
+let resultado = 0
+switch (calculo) {
+    case '+':
+       resultado= num1+num2
+       document.write('O resultado é: '+ resultado)
+        break;
+
+   case '-':
+    resultado = num1-num2
+    document.write('O resultado é: ' + resultado)
+        break;
+        case '*':
+            resultado = num1 *num2
+            document.write('O resultado é: '+ resultado)
+            break
+        case '/':
+            resultado = num1/num2
+            document.write('O resultado é: '+ resultado)
+            break
+        default:
+            document.write('Digite uma operação válida')
+}
+
+</script>
+</body>
+</html>

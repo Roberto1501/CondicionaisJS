@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 03</title>
+</head>
+
+<body>
+    <script>
+        /*   Faça um algoritmo que simule um caixa eletrônico. Nesse algoritmo
+   a conta do usuário deve ser criada já com um saldo positivo. O
+   usuário precisa informar a quantidade de dinheiro que deseja
+   retirar, esse valor deve ser um número positivo, múltiplo de 5 e
+   menor do que o saldo. Cada saque eletrônico cobra uma taxa de
+   R$4.50. Ao final deve ser informado o saldo da conta caso dê tudo
+   certo com o saque, e se o usuário informar um valor maior que o
+   saldo deve ser informado ao usuário que o mesmo não tem dinheiro
+   suficiente em conta para realizar o saque.
+   OBS: Na verificação se o valor do saque é maior que o saldo deve
+   ser considerado e também contabilizado o valor da taxa a ser
+   cobrada pelo saque. Ou seja, o valor a ser sacado somado ao valor
+   da taxa do saque não pode ser maior que o saldo disponível.*/
+
+        let saldo = 1300
+        let saque = parseFloat(prompt('Digiteo valor que deseja sacar'))
+        const taxa = 4.50
+        if (saldo < saque) {
+            document.write('Impossivel sacar o dinheiro, por dinheiro insuficiente')
+
+        }
+        else if (saque % 5 == 0) {
+            saldo = 1300
+            saldo = saldo - saque - taxa
+
+            document.write('Voce pode sacar' + '<br />')
+            document.write(saldo)
+
+        }
+
+        else {
+            document.write('Impossivel sacar, escolha outro valor de saque')
+        }
+
+    </script>
+</body>
+
+</html>

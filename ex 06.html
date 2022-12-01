@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 06</title>
+</head>
+<body>
+    <script>
+      /*  Pedro tem 1,50m de altura e cresce 2 centímetros por ano, enquanto
+Lucas tem 1,10m de altura e cresce 3 centímetros por ano.
+Construa um algoritmo que calcule e imprima quantos anos serão
+necessários para que:
+a. Lucas e Pedro tenham o mesmo tamanho;
+b. Lucas seja maior que Pedro.*/
+
+let alt_pedro = 1.50;
+
+let alt_lucas = 1.10;
+
+let anos = 0;
+
+while(alt_pedro >= alt_lucas){
+    alt_pedro += 0.02;
+    alt_lucas += 0.03;
+    anos += 1;
+}
+
+
+document.write('Altura final de Pedro: ' + alt_pedro.toFixed(2), '<br/>');
+
+document.write('Altura final de Lucas: ' + alt_lucas.toFixed(2), '<br/> <br/>');
+
+document.write(`Pedro e Lucas terão a mesma altura daqui a ${anos - 1} anos. <br/> <br/>`);
+
+document.write(`Lucas será maior que Pedro daqui a ${anos} anos.`);
+
+    </script>
+</body>
+</html>
